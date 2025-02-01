@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detection Result</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #a8edea, #fed6e3);
+            padding: 30px;
+        }
+
+        h2 {
+            color: #333;
+            font-weight: 600;
+        }
+
+        p {
+            color: #444;
+            font-size: 18px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* Space between images */
+            flex-wrap: wrap; /* Ensures responsiveness */
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff758c;
+            color: white;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background: #ff5c72;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Detection Result</h2>
+
+    <div class="image-container">
+        <div>
+            <p><strong>Input Image:</strong></p>
+            <img src="{{ input_img }}">
+        </div>
+
+        <div>
+            <p><strong>Output Image:</strong></p>
+            <img src="{{ output_img }}">
+        </div>
+    </div>
+
+    <br>
+    <a href="/" class="btn">Upload Another Image</a>
+
+</body>
+</html>
